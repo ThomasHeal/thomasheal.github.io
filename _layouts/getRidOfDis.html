@@ -1,39 +1,42 @@
----
-layout: default
----
-
-{{ content }}
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
-
 <!-- <iframe src="https://i.simmer.io/@GroupOne/search-and-rescue" style="width:400px;height:400px"></iframe>     -->
 
 <div class="flex-container">
-  <div class="card">
-    <div class="front">
-      <img src="../assets/images/SRScreenshot.png" alt="Search-and-rescue" />
-      <h2>Search and Rescue</h2>
+    <div class="card">
+      <div class="front">
+        <img src="../assets/images/SRScreenshot.png" alt="Search-and-rescue" />
+        <h2>Search and Rescue</h2>
+      </div>
+      <div class="back">
+        <h2>Search and Rescue</h2>
+        <p>This was a game that I worked on with my friends in the 2022 Brackeys game jam</p>
+        <p><a href="#">Play Game</a></p>
+      </div>
     </div>
-    <div class="back">
-      <h2>Search and Rescue</h2>
-      <p>This was a game that I worked on with my friends in the 2022 Brackeys game jam</p>
-      <p><a href="../searchAndRescue">Play Game</a></p>
+    <div class="card">
+      <div class="front">
+        <img src="../assets/images/SRScreenshot.png" alt="Search-and-rescue" />
+        <h2>Search and Rescue</h2>
+      </div>
+      <div class="back">
+        <h2>Search and Rescue</h2>
+        <p>This was a game that I worked on with my friends in the 2022 Brackeys game jam</p>
+        <p><a href="SearchandRescue.html">Play Game</a></p>
+      </div>
     </div>
+    <div class="card">
+        <div class="front">
+          <img src="../assets/images/SRScreenshot.png" alt="Search-and-rescue" />
+          <h2>Search and Rescue</h2>
+        </div>
+        <div class="back">
+          <h2>Search and Rescue</h2>
+          <p>This was a game that I worked on with my friends in the 2022 Brackeys game jam</p>
+          <p><a href="#">Play Game</a></p>
+        </div>
+      </div>
   </div>
-</div>
-
-<style>
+  
+  <style>
   .flex-container {
     display: flex;
     flex-wrap: nowrap;
@@ -103,6 +106,3 @@ layout: default
   }
   
   </style>
-
-
-{% include paginator.html %}
